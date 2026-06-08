@@ -9,3 +9,5 @@
 - Adición de `.gitignore` para artefactos locales sin ocultar entregables académicos.
 - Actualización de documentación para ejecución local y despliegue en GitHub Pages.
 - Ajuste de ortografía, menú lateral y copiado real de prompts.
+- Documentación del despliegue por GitHub Actions publicando `./src` como artefacto de Pages.
+- Traslado del changelog a `src/changelog.md` para mantener la documentación junto al prototipo publicado.
