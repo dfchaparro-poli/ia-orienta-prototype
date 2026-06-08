@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IA Orienta</title>
+    <meta name="description" content="Prototipo academico para alfabetizacion, orientacion y recomendacion de herramientas de IA.">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/components.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Navegacion principal">
+        <a class="brand" href="#/" aria-label="Ir al inicio">
+          <span class="brand-mark">IA</span>
+          <span>
+            <strong>IA Orienta</strong>
+            <small>Prototipo academico</small>
+          </span>
+        </a>
+        <nav class="nav-list" id="main-nav"></nav>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Alfabetizacion y guia en IA</p>
+            <h1 id="page-title">IA Orienta</h1>
+          </div>
+          <a class="ghost-button" href="#/favoritos">Favoritos</a>
+        </header>
+        <section id="app" class="view" aria-live="polite"></section>
+      </main>
+    </div>
+
+    <script src="./js/data.js"></script>
+    <script src="./js/views/home.js"></script>
+    <script src="./js/views/profile.js"></script>
+    <script src="./js/views/diagnosis.js"></script>
+    <script src="./js/views/recommendation.js"></script>
+    <script src="./js/views/explorer.js"></script>
+    <script src="./js/views/prompts.js"></script>
+    <script src="./js/views/learning.js"></script>
+    <script src="./js/views/favorites.js"></script>
+    <script src="./js/router.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

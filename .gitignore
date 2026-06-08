@@ -1,0 +1,17 @@
+.DS_Store
+Thumbs.db
+
+.vscode/
+.idea/
+
+*.log
+*.tmp
+*.temp
+
+.cache/
+.parcel-cache/
+.eslintcache
+
+node_modules/
+dist/
+build/

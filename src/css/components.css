@@ -1,0 +1,161 @@
+.button,
+.ghost-button,
+.option-card,
+.copy-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  border-radius: var(--radius);
+  font-weight: 800;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.button {
+  gap: 0.55rem;
+  padding: 0.75rem 1rem;
+  border: 0;
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 14px 34px rgba(18, 110, 130, 0.25);
+}
+
+.button:hover,
+.ghost-button:hover,
+.option-card:hover,
+.copy-button:hover {
+  transform: translateY(-1px);
+}
+
+.ghost-button {
+  padding: 0.68rem 0.9rem;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--primary-strong);
+}
+
+.card,
+.option-card,
+.recommendation-card,
+.prompt-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 16px 45px rgba(23, 33, 43, 0.07);
+}
+
+.card {
+  padding: 1.15rem;
+}
+
+.option-card {
+  width: 100%;
+  justify-content: flex-start;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  text-align: left;
+}
+
+.option-card.selected {
+  border-color: rgba(18, 110, 130, 0.7);
+  background: var(--surface-soft);
+  box-shadow: 0 14px 36px rgba(18, 110, 130, 0.14);
+}
+
+.metric-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.25rem 0;
+}
+
+.tool-card {
+  display: grid;
+  gap: 0.7rem;
+  min-height: 190px;
+}
+
+.tool-card header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.tool-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: var(--radius);
+  background: rgba(223, 142, 53, 0.14);
+  color: #935512;
+  font-weight: 900;
+}
+
+.recommendation-card {
+  display: grid;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-color: rgba(18, 110, 130, 0.38);
+  background: linear-gradient(135deg, #ffffff, #edf5f2);
+}
+
+.recommendation-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.alternative-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.prompt-card {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+
+.prompt-text {
+  min-height: 112px;
+  padding: 0.85rem;
+  border-radius: var(--radius);
+  background: #f7f9fb;
+  color: #293544;
+}
+
+.copy-button {
+  width: 100%;
+  border: 1px solid rgba(18, 110, 130, 0.28);
+  background: #fff;
+  color: var(--primary-strong);
+}
+
+.copy-button.copied {
+  border-color: rgba(40, 122, 82, 0.45);
+  background: rgba(40, 122, 82, 0.1);
+  color: var(--success);
+}
+
+.timeline {
+  display: grid;
+  gap: 0.8rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.timeline li {
+  padding-left: 1rem;
+  border-left: 3px solid rgba(18, 110, 130, 0.28);
+}

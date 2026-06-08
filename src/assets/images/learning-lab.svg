@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" role="img" aria-labelledby="title desc">
+  <title id="title">Laboratorio de aprendizaje con IA</title>
+  <desc id="desc">Ilustracion abstracta de tarjetas, nodos y una interfaz educativa.</desc>
+  <rect width="900" height="700" fill="#126e82"/>
+  <path fill="#f5f7fb" fill-opacity=".18" d="M90 104h720v492H90z"/>
+  <rect x="150" y="150" width="290" height="140" rx="8" fill="#fff" fill-opacity=".88"/>
+  <rect x="150" y="326" width="600" height="82" rx="8" fill="#fff" fill-opacity=".76"/>
+  <rect x="480" y="150" width="270" height="140" rx="8" fill="#df8e35" fill-opacity=".86"/>
+  <rect x="150" y="440" width="180" height="110" rx="8" fill="#fff" fill-opacity=".8"/>
+  <rect x="360" y="440" width="180" height="110" rx="8" fill="#fff" fill-opacity=".68"/>
+  <rect x="570" y="440" width="180" height="110" rx="8" fill="#fff" fill-opacity=".8"/>
+  <circle cx="226" cy="220" r="28" fill="#126e82"/>
+  <circle cx="548" cy="220" r="32" fill="#fff" fill-opacity=".92"/>
+  <circle cx="640" cy="220" r="32" fill="#fff" fill-opacity=".92"/>
+  <path stroke="#17212b" stroke-opacity=".25" stroke-width="10" d="M270 198h120M270 232h96M206 368h430M206 480h78M416 480h78M626 480h78"/>
+</svg>
