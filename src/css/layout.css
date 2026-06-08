@@ -57,6 +57,29 @@
   font-weight: 700;
 }
 
+.nav-icon {
+  display: grid;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  place-items: center;
+  color: inherit;
+}
+
+.nav-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.9;
+}
+
+.nav-label {
+  min-width: 0;
+}
+
 .nav-link:hover,
 .nav-link.active {
   background: var(--surface-soft);

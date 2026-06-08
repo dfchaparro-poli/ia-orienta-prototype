@@ -1,14 +1,14 @@
 window.IAOrienta = window.IAOrienta || {};
 
 window.IAOrienta.navItems = [
-  { path: "#/", label: "Inicio" },
-  { path: "#/perfil", label: "Perfil" },
-  { path: "#/diagnostico", label: "Diagnóstico" },
-  { path: "#/recomendacion", label: "Recomendador" },
-  { path: "#/explorador", label: "Explorador" },
-  { path: "#/prompts", label: "Prompts" },
-  { path: "#/aprendizaje", label: "Aprendizaje" },
-  { path: "#/favoritos", label: "Favoritos" }
+  { path: "#/", label: "Inicio", icon: "home" },
+  { path: "#/perfil", label: "Perfil", icon: "user" },
+  { path: "#/diagnostico", label: "Diagnóstico", icon: "checklist" },
+  { path: "#/recomendacion", label: "Recomendador", icon: "spark" },
+  { path: "#/explorador", label: "Explorador", icon: "grid" },
+  { path: "#/prompts", label: "Prompts", icon: "file" },
+  { path: "#/aprendizaje", label: "Aprendizaje", icon: "book" },
+  { path: "#/favoritos", label: "Favoritos", icon: "heart" }
 ];
 
 window.IAOrienta.profiles = [
