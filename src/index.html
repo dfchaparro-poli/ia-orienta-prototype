@@ -11,19 +11,33 @@
   </head>
   <body>
     <div class="app-shell">
-      <aside class="sidebar" aria-label="Navegación principal">
-        <a class="brand" href="#/" aria-label="Ir al inicio">
-          <span class="brand-mark">IA</span>
-          <span>
-            <strong>IA Orienta</strong>
-            <small>Prototipo de Alta Resolución</small>
-          </span>
-        </a>
+      <div class="sidebar-backdrop" id="sidebar-backdrop" hidden></div>
+      <aside class="sidebar" id="sidebar" aria-label="Navegación principal">
+        <div class="sidebar-header">
+          <a class="brand" href="#/" aria-label="Ir al inicio">
+            <span class="brand-mark">IA</span>
+            <span>
+              <strong>IA Orienta</strong>
+              <small>Prototipo de Alta Resolución</small>
+            </span>
+          </a>
+          <button class="icon-button sidebar-close" type="button" aria-label="Cerrar menú" data-sidebar-close>
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
         <nav class="nav-list" id="main-nav"></nav>
       </aside>
 
       <main class="main-panel">
         <header class="topbar">
+          <div class="topbar-actions">
+            <button class="icon-button menu-toggle" type="button" aria-label="Abrir menú" aria-controls="sidebar" aria-expanded="false" data-sidebar-open>
+              <span aria-hidden="true">☰</span>
+            </button>
+            <button class="icon-button back-button" type="button" aria-label="Volver a la vista anterior" data-route-back>
+              <span aria-hidden="true">‹</span>
+            </button>
+          </div>
           <div>
             <p class="eyebrow">Alfabetización y guía en IA</p>
             <h1 id="page-title">IA Orienta</h1>

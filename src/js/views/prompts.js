@@ -8,6 +8,12 @@ window.IAOrienta.renderPrompts = function renderPrompts() {
         <span class="tag">${prompt.category}</span>
         <h3>${prompt.title}</h3>
         <div class="prompt-text" id="prompt-${index}">${prompt.text}</div>
+        <section class="prompt-why" aria-label="Por qué funciona este prompt">
+          <h3>¿Por qué funciona este prompt?</h3>
+          <p><strong>Objetivo:</strong> ${prompt.why.objective}</p>
+          <p><strong>Contexto:</strong> ${prompt.why.context}</p>
+          <p><strong>Resultado esperado:</strong> ${prompt.why.result}</p>
+        </section>
         <button class="copy-button" data-copy="${index}" aria-describedby="prompt-${index}">Copiar</button>
       </article>
     `)
@@ -18,8 +24,9 @@ window.IAOrienta.renderPrompts = function renderPrompts() {
       <div>
         <p class="eyebrow">Práctica guiada</p>
         <h2>Biblioteca de Prompts</h2>
-        <p class="lead">Ejemplos listos para adaptar y copiar. Úsalos como punto de partida y reemplaza los campos entre corchetes.</p>
+        <p class="lead">Ejemplos listos para adaptar y copiar. Cada prompt muestra su objetivo, el contexto que aporta y el resultado esperado para aprender a escribir mejores instrucciones.</p>
       </div>
+      <p class="notice">Un buen prompt no garantiza una respuesta correcta: siempre revisa datos, tono y fuentes antes de usar el resultado.</p>
       <div class="grid two">${cards}</div>
     </section>
   `;

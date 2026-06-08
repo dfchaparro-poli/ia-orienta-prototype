@@ -1,13 +1,17 @@
 .button,
 .ghost-button,
 .option-card,
-.copy-button {
+.copy-button,
+.icon-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  max-width: 100%;
   min-height: 44px;
   border-radius: var(--radius);
   font-weight: 800;
+  line-height: 1.25;
+  text-align: center;
   transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
 }
 
@@ -38,6 +42,7 @@
 .option-card,
 .recommendation-card,
 .prompt-card {
+  min-width: 0;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);
@@ -56,6 +61,14 @@
   background: var(--surface);
   color: var(--ink);
   text-align: left;
+  white-space: normal;
+}
+
+.option-card span,
+.option-card small,
+.option-card strong {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .option-card.selected {
@@ -74,7 +87,6 @@
 .tool-card {
   display: grid;
   gap: 0.7rem;
-  min-height: 190px;
 }
 
 .tool-card header {
@@ -82,6 +94,7 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 0.75rem;
+  min-width: 0;
 }
 
 .tool-icon {
@@ -94,6 +107,12 @@
   background: rgba(223, 142, 53, 0.14);
   color: #935512;
   font-weight: 900;
+}
+
+.tool-note {
+  margin-bottom: 0;
+  color: #596678;
+  font-size: 0.9rem;
 }
 
 .recommendation-card {
@@ -109,6 +128,21 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  min-width: 0;
+}
+
+.why-tool {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 1px solid rgba(18, 110, 130, 0.18);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.why-tool p {
+  margin-bottom: 0;
+  font-size: 0.94rem;
 }
 
 .alternative-list {
@@ -127,11 +161,31 @@
 }
 
 .prompt-text {
-  min-height: 112px;
   padding: 0.85rem;
   border-radius: var(--radius);
   background: #f7f9fb;
   color: #293544;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.prompt-why {
+  display: grid;
+  gap: 0.35rem;
+  padding: 0.85rem;
+  border-radius: var(--radius);
+  background: #fffaf2;
+}
+
+.prompt-why h3,
+.prompt-why p {
+  margin-bottom: 0;
+}
+
+.prompt-why p {
+  color: #4c5968;
+  font-size: 0.92rem;
+  line-height: 1.5;
 }
 
 .copy-button {
@@ -147,6 +201,26 @@
   color: var(--success);
 }
 
+.icon-button {
+  width: 44px;
+  min-width: 44px;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--primary-strong);
+  font-size: 1.35rem;
+  box-shadow: none;
+}
+
+.icon-button:hover {
+  background: var(--surface-soft);
+}
+
+.menu-toggle,
+.sidebar-close {
+  display: none;
+}
+
 .timeline {
   display: grid;
   gap: 0.8rem;
@@ -158,4 +232,41 @@
 .timeline li {
   padding-left: 1rem;
   border-left: 3px solid rgba(18, 110, 130, 0.28);
+  color: #435060;
+  line-height: 1.55;
+}
+
+.learning-card,
+.learning-module {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.learning-card p,
+.learning-module p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 560px) {
+  .card,
+  .recommendation-card,
+  .prompt-card {
+    padding: 0.95rem;
+  }
+
+  .recommendation-title {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .metric-row {
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .menu-toggle,
+  .sidebar-close {
+    display: inline-flex;
+  }
 }

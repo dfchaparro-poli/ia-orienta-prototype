@@ -25,14 +25,32 @@ window.IAOrienta.renderRecommendation = function renderRecommendation({ state })
           <span class="tag">Mejor ajuste inicial</span>
         </div>
         <p>${recommendation.reason}</p>
+        <section class="why-tool" aria-label="Por qué esta herramienta">
+          <h3>¿Por qué esta herramienta?</h3>
+          <div class="grid three">
+            <div>
+              <strong>Qué hace</strong>
+              <p>${recommendation.does}</p>
+            </div>
+            <div>
+              <strong>Cuándo usarla</strong>
+              <p>${recommendation.when}</p>
+            </div>
+            <div>
+              <strong>Limitaciones</strong>
+              <p>${recommendation.limitations}</p>
+            </div>
+          </div>
+        </section>
         <div>
           <h3>Alternativas</h3>
           <ul class="alternative-list">${alternatives}</ul>
         </div>
         <div class="prompt-text"><strong>Prompt sugerido:</strong> ${recommendation.prompt}</div>
+        <p class="notice">La recomendación orienta la elección, pero la calidad depende de tus datos, contexto y validación posterior.</p>
       </article>
       <div class="grid two">
-        <a class="ghost-button" href="#/explorador">Explorar mas herramientas</a>
+        <a class="ghost-button" href="#/explorador">Explorar más herramientas</a>
         <a class="ghost-button" href="#/prompts">Ver biblioteca de prompts</a>
       </div>
     </section>

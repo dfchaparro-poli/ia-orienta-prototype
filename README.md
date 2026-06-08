@@ -53,8 +53,24 @@ El prototipo es compatible con GitHub Pages porque usa rutas relativas, scripts 
 
 1. Selección de perfil.
 2. Diagnóstico de necesidad.
-3. Recomendación simulada de herramienta IA.
+3. Recomendación simulada de herramienta IA con explicación de uso, momento adecuado y limitaciones.
 4. Exploración de herramientas.
-5. Consulta de prompts.
-6. Módulos breves de alfabetización IA.
+5. Consulta de prompts con explicación educativa sobre objetivo, contexto y resultado esperado.
+6. Centro de Aprendizaje como módulo principal de alfabetización IA.
 7. Favoritos e historial simulados.
+
+## Enfoque de alfabetización IA
+
+El prototipo refuerza que IA Orienta no es solo un recomendador de herramientas. La experiencia guía al usuario para comprender:
+
+- Qué es la inteligencia artificial y qué límites tiene.
+- Cómo elegir una herramienta según tarea, contexto y privacidad.
+- Cómo crear prompts más claros y útiles.
+- Cómo validar respuestas antes de usarlas.
+- Qué riesgos considerar: sesgos, información incorrecta, privacidad y uso responsable.
+
+## Responsive design
+
+La interfaz fue ajustada con enfoque mobile first para pantallas de 360px, 390px, 414px, 768px, 1024px y desktop. Los layouts se apilan en una columna en móvil, la navegación usa un sidebar lateral que se puede abrir y cerrar, la barra superior queda fija durante el scroll y los contenedores usan anchos fluidos para evitar scroll horizontal.
+
+En escritorio, el sidebar permanece fijo durante el scroll para mantener una navegación consistente sin recortarse. En móvil, la barra superior incluye un botón de volver que usa el historial interno del prototipo.

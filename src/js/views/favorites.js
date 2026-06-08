@@ -7,10 +7,11 @@ window.IAOrienta.renderFavorites = function renderFavorites({ state }) {
   return `
     <section class="section-stack">
       <div>
-        <p class="eyebrow">Simulacion</p>
+        <p class="eyebrow">Simulación</p>
         <h2>Recursos Favoritos</h2>
         <p class="lead">Vista demostrativa de recursos guardados e historial. No hay persistencia al recargar.</p>
       </div>
+      <p class="notice">Los favoritos ayudan a recordar rutas de aprendizaje, pero no almacenan datos reales ni crean una cuenta.</p>
       <div class="grid two">
         <article class="card">
           <h3>Recursos guardados</h3>

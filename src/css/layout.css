@@ -1,26 +1,44 @@
 .app-shell {
-  display: grid;
+  display: block;
+  width: 100%;
   min-height: 100vh;
-  grid-template-columns: 280px minmax(0, 1fr);
+  padding-left: 280px;
 }
 
 .sidebar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
   display: flex;
-  height: 100vh;
+  width: 280px;
+  min-height: 100vh;
   flex-direction: column;
   gap: 2rem;
+  overflow-y: auto;
   padding: 1.25rem;
   border-right: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(18px);
 }
 
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.sidebar-backdrop {
+  display: none;
+}
+
 .brand {
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  min-width: 0;
 }
 
 .brand-mark {
@@ -41,15 +59,22 @@
   font-size: 0.78rem;
 }
 
+.brand strong,
+.brand small {
+  overflow-wrap: anywhere;
+}
+
 .nav-list {
   display: grid;
   gap: 0.35rem;
+  width: 100%;
 }
 
 .nav-link {
   display: flex;
   align-items: center;
   gap: 0.7rem;
+  min-width: 0;
   min-height: 44px;
   padding: 0.65rem 0.75rem;
   border-radius: var(--radius);
@@ -78,6 +103,7 @@
 
 .nav-label {
   min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .nav-link:hover,
@@ -87,6 +113,7 @@
 }
 
 .main-panel {
+  width: 100%;
   min-width: 0;
   padding: 1.5rem clamp(1rem, 3vw, 2.5rem) 2.5rem;
 }
@@ -99,13 +126,24 @@
   margin-bottom: 1.4rem;
 }
 
+.topbar-actions {
+  display: none;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.menu-toggle,
+.sidebar-close {
+  display: none;
+}
+
 .view {
+  width: 100%;
   max-width: 1180px;
 }
 
 .hero {
   display: grid;
-  min-height: calc(100vh - 170px);
   align-items: center;
   gap: 2rem;
   grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
@@ -114,7 +152,7 @@
 .hero-panel {
   position: relative;
   overflow: hidden;
-  min-height: 430px;
+  min-height: clamp(240px, 36vw, 430px);
   border-radius: 8px;
   background:
     linear-gradient(135deg, rgba(18, 110, 130, 0.92), rgba(40, 122, 82, 0.74)),
@@ -122,25 +160,16 @@
   box-shadow: var(--shadow);
 }
 
-.hero-panel::after {
-  position: absolute;
-  right: 24px;
-  bottom: 24px;
-  width: 180px;
-  height: 180px;
-  border: 1px solid rgba(255, 255, 255, 0.36);
-  border-radius: 50%;
-  content: "";
-}
-
 .section-stack {
   display: grid;
   gap: 1rem;
+  min-width: 0;
 }
 
 .grid {
   display: grid;
   gap: 1rem;
+  min-width: 0;
 }
 
 .grid.two {
@@ -152,30 +181,87 @@
 }
 
 .grid.auto {
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
+}
+
+.home-stack {
+  gap: 2rem;
+}
+
+.literacy-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
 }
 
 @media (max-width: 900px) {
   .app-shell {
-    grid-template-columns: 1fr;
+    align-content: start;
+    padding-left: 0;
+  }
+
+  .main-panel {
+    padding-top: calc(var(--mobile-topbar-offset, 0px) + 1rem);
+  }
+
+  .topbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 12;
+    margin: 0;
+    padding: 1rem clamp(1rem, 3vw, 2.5rem);
+    border-bottom: 1px solid rgba(220, 227, 234, 0.82);
+    background: rgba(245, 247, 251, 0.94);
+    backdrop-filter: blur(16px);
+  }
+
+  .topbar-actions {
+    display: flex;
   }
 
   .sidebar {
-    position: static;
-    height: auto;
+    position: fixed;
+    align-self: start;
+    width: min(82vw, 320px);
+    height: 100vh;
     gap: 1rem;
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
+    padding: 1rem;
+    border-right: 1px solid var(--line);
+    border-bottom: 0;
+    box-shadow: 22px 0 60px rgba(23, 33, 43, 0.16);
+    transform: translateX(-105%);
+    transition: transform 180ms ease;
   }
 
-  .nav-list {
-    display: flex;
-    overflow-x: auto;
-    padding-bottom: 0.25rem;
+  body.sidebar-open .sidebar {
+    transform: translateX(0);
+  }
+
+  .sidebar-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 15;
+    display: block;
+    background: rgba(23, 33, 43, 0.38);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease;
+  }
+
+  body.sidebar-open .sidebar-backdrop {
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .nav-link {
-    flex: 0 0 auto;
+    justify-content: flex-start;
+  }
+
+  .menu-toggle,
+  .sidebar-close {
+    display: inline-flex;
   }
 
   .hero,
@@ -193,13 +279,62 @@
   }
 }
 
+@media (max-width: 767px) {
+  .brand-mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-list {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-link {
+    min-height: 48px;
+    padding: 0.65rem;
+    font-size: 0.92rem;
+  }
+
+  .hero {
+    gap: 1.25rem;
+  }
+}
+
 @media (max-width: 560px) {
   .topbar {
     align-items: flex-start;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    margin: 0;
+    padding: 1rem 0.85rem;
+  }
+
+  .topbar .ghost-button {
+    grid-column: 1 / -1;
   }
 
   .main-panel {
-    padding-inline: 1rem;
+    padding: calc(var(--mobile-topbar-offset, 0px) + 1rem) 0.85rem 1.5rem;
+  }
+
+  .topbar .ghost-button,
+  .button {
+    width: 100%;
+  }
+
+  .hero-panel {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 380px) {
+  .sidebar {
+    padding: 0.85rem;
+  }
+
+  .nav-link {
+    gap: 0.45rem;
+    padding-inline: 0.5rem;
+    font-size: 0.86rem;
   }
 }

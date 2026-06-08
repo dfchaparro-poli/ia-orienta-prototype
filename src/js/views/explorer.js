@@ -18,6 +18,7 @@ window.IAOrienta.renderExplorer = function renderExplorer() {
             </header>
             <p>${tool.description}</p>
             <span class="tag">${tool.use}</span>
+            <p class="tool-note">Valida resultados y evita compartir información sensible al probar esta categoría.</p>
           </article>
         `)
         .join("");
@@ -36,7 +37,7 @@ window.IAOrienta.renderExplorer = function renderExplorer() {
       <div>
         <p class="eyebrow">Mapa de herramientas</p>
         <h2>Explorador IA</h2>
-        <p class="lead">Herramientas organizadas por categoría para mostrar opciones posibles dentro del recorrido académico.</p>
+        <p class="lead">Herramientas organizadas por categoría para comparar usos posibles, límites y decisiones responsables dentro del recorrido académico.</p>
       </div>
       ${sections}
     </section>
