@@ -1,10 +1,10 @@
 # IA Orienta Prototype
 
-Prototipo academico de alta resolucion para demostrar alfabetizacion en inteligencia artificial, orientacion de herramientas, recomendacion segun necesidades, biblioteca de prompts y recursos de aprendizaje.
+Prototipo académico de alta resolución para demostrar alfabetización en inteligencia artificial, orientación de herramientas, recomendación según necesidades, biblioteca de prompts y recursos de aprendizaje.
 
-Este repositorio no contiene una aplicacion productiva. Todas las interacciones son simuladas y no existe backend, base de datos, autenticacion ni integracion con APIs externas.
+Este repositorio no contiene una aplicación productiva. Todas las interacciones son simuladas y no existe backend, base de datos, autenticación ni integración con APIs externas.
 
-## Tecnologias
+## Tecnologías
 
 - HTML5
 - CSS3
@@ -30,20 +30,20 @@ src/
 
 Abre `src/index.html` directamente en el navegador.
 
-Tambien puedes usar un servidor estatico simple si lo prefieres, pero no es obligatorio para el prototipo.
+También puedes usar un servidor estático simple si lo prefieres, pero no es obligatorio para el prototipo.
 
 ## Despliegue en GitHub Pages
 
-El prototipo es compatible con GitHub Pages porque usa rutas relativas, scripts clasicos, no requiere variables de entorno y no tiene proceso de build.
+El prototipo es compatible con GitHub Pages porque usa rutas relativas, scripts clásicos, no requiere variables de entorno y no tiene proceso de build.
 
-Configura GitHub Pages para publicar el contenido estatico del proyecto segun la estrategia del repositorio. La aplicacion principal esta en `src/index.html`.
+Configura GitHub Pages para publicar el contenido estático del proyecto según la estrategia del repositorio. La aplicación principal está en `src/index.html`.
 
 ## Flujo demostrado
 
-1. Seleccion de perfil.
-2. Diagnostico de necesidad.
-3. Recomendacion simulada de herramienta IA.
-4. Exploracion de herramientas.
+1. Selección de perfil.
+2. Diagnóstico de necesidad.
+3. Recomendación simulada de herramienta IA.
+4. Exploración de herramientas.
 5. Consulta de prompts.
-6. Modulos breves de alfabetizacion IA.
+6. Módulos breves de alfabetización IA.
 7. Favoritos e historial simulados.

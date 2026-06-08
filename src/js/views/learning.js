@@ -5,7 +5,7 @@ window.IAOrienta.renderLearning = function renderLearning() {
   const modules = learningModules
     .map((module, index) => `
       <article class="card">
-        <span class="tag">Modulo ${index + 1}</span>
+        <span class="tag">Módulo ${index + 1}</span>
         <h3>${module.title}</h3>
         <p>${module.content}</p>
       </article>

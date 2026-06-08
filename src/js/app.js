@@ -20,8 +20,8 @@ const actions = {
 
 const routes = {
   "#/": { title: "IA Orienta", view: IA.renderHome },
-  "#/perfil": { title: "Seleccion de perfil", view: IA.renderProfile, afterRender: IA.bindProfile },
-  "#/diagnostico": { title: "Diagnostico de necesidades", view: IA.renderDiagnosis, afterRender: IA.bindDiagnosis },
+  "#/perfil": { title: "Selección de perfil", view: IA.renderProfile, afterRender: IA.bindProfile },
+  "#/diagnostico": { title: "Diagnóstico de necesidades", view: IA.renderDiagnosis, afterRender: IA.bindDiagnosis },
   "#/recomendacion": { title: "Recomendador IA", view: IA.renderRecommendation },
   "#/explorador": { title: "Explorador IA", view: IA.renderExplorer },
   "#/prompts": { title: "Biblioteca de Prompts", view: IA.renderPrompts, afterRender: IA.bindPrompts },

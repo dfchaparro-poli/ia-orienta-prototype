@@ -36,7 +36,7 @@ window.IAOrienta.renderExplorer = function renderExplorer() {
       <div>
         <p class="eyebrow">Mapa de herramientas</p>
         <h2>Explorador IA</h2>
-        <p class="lead">Herramientas organizadas por categoria para mostrar opciones posibles dentro del recorrido academico.</p>
+        <p class="lead">Herramientas organizadas por categoría para mostrar opciones posibles dentro del recorrido académico.</p>
       </div>
       ${sections}
     </section>

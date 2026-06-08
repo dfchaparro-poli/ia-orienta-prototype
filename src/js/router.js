@@ -8,7 +8,7 @@ window.IAOrienta.createRouter = function createRouter(routes, shell) {
 
   function renderNav() {
     nav.innerHTML = navItems
-      .map((item) => `<a class="nav-link" href="${item.path}" data-route="${item.path}"><span>${item.icon}</span><span>${item.label}</span></a>`)
+      .map((item) => `<a class="nav-link" href="${item.path}" data-route="${item.path}">${item.label}</a>`)
       .join("");
   }
 

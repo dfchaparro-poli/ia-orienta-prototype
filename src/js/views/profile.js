@@ -15,10 +15,10 @@ window.IAOrienta.renderProfile = function renderProfile({ state }) {
       <div>
         <p class="eyebrow">Paso 1</p>
         <h2>Selecciona tu perfil</h2>
-        <p class="lead">El prototipo adapta el lenguaje de orientacion segun el tipo de usuario. La seleccion es temporal y demostrativa.</p>
+        <p class="lead">El prototipo adapta el lenguaje de orientación según el tipo de usuario. La selección es temporal y demostrativa.</p>
       </div>
       <div class="grid three">${cards}</div>
-      <p class="notice">No hay registro ni autenticacion. Esta seleccion solo vive durante la sesion actual.</p>
+      <p class="notice">No hay registro ni autenticación. Esta selección solo vive durante la sesión actual.</p>
     </section>
   `;
 };

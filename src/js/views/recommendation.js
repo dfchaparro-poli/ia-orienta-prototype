@@ -13,8 +13,8 @@ window.IAOrienta.renderRecommendation = function renderRecommendation({ state })
     <section class="section-stack">
       <div>
         <p class="eyebrow">Resultado simulado</p>
-        <h2>Recomendacion para ${selectedNeed.label.toLowerCase()}</h2>
-        <p class="lead">Esta recomendacion es demostrativa y debe validarse segun contexto, privacidad y criterios academicos.</p>
+        <h2>Recomendación para ${selectedNeed.label.toLowerCase()}</h2>
+        <p class="lead">Esta recomendación es demostrativa y debe validarse según contexto, privacidad y criterios académicos.</p>
       </div>
       <article class="recommendation-card">
         <div class="recommendation-title">

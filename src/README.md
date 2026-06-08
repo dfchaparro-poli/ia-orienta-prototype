@@ -1,6 +1,6 @@
 # IA Orienta - Fuente del prototipo
 
-Esta carpeta contiene la aplicacion estatica del prototipo IA Orienta.
+Esta carpeta contiene la aplicación estática del prototipo IA Orienta.
 
 ## Estructura
 

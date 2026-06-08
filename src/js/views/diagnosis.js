@@ -17,8 +17,8 @@ window.IAOrienta.renderDiagnosis = function renderDiagnosis({ state }) {
     <section class="section-stack">
       <div>
         <p class="eyebrow">Paso 2</p>
-        <h2>Que necesitas resolver?</h2>
-        <p class="lead">Elige una necesidad para recibir una recomendacion orientativa de herramientas de IA.</p>
+        <h2>¿Qué necesitas resolver?</h2>
+        <p class="lead">Elige una necesidad para recibir una recomendación orientativa de herramientas de IA.</p>
       </div>
       <div class="grid two">${cards}</div>
     </section>
